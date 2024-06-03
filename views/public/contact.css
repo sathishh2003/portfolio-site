@@ -1,0 +1,99 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+:root{
+    --BGCOLOR1: rgb(53, 103, 185);
+    --BGCOLOR2: lightskyblue;
+    --BGCOLOR3:whitesmoke;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    background-color:var(--BGCOLOR);
+    min-height:100vh;
+    text-align: center; 
+    color:var(--BGCOLOR1);
+    background-color: var(--BGCOLOR2);
+}
+.det{
+    color:var(--BGCOLOR2);
+
+}
+.outer{
+    border:2px solid black; 
+    padding:20px;
+    text-align: center;
+    background-color: white;
+    transition: transform 4s;
+}
+.outer:hover{
+    transform: scale(1.1);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:var(--BGCOLOR1);
+}
+a:active{
+    color:var(--BGCOLOR);
+}
+.backbtn{
+    margin-top: 2rem;
+    padding: 4px 1.7rem;
+    color:var(--BGCOLOR3);
+    background-color: var(--BGCOLOR1);
+    font-family: cursive;
+    border:2px solid black;
+}
+.backbtn:hover{
+    background-color: var(--BGCOLOR2);
+}
+.backbtn:active{
+    background-color: var(--BGCOLOR1);
+    color:var(--BGCOLOR);
+}
+header{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    /* padding-bottom: 4px; */
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--BGCOLOR1);
+}
+.links{
+    display: flex;
+    gap: 1rem;
+    font-weight: 500;
+}
+ .links .contact{
+    color:var(--BGCOLOR2);
+    border-bottom: 3px solid white;
+} 
+#icon{
+    color:white;
+}
+.icons{
+    display: flex;
+    gap:1rem;
+}
+#icon{
+    font-size: 1.2rem;
+}
+.links a{
+    color:white;
+    text-decoration: none;
+    font-size: 0.8rem; 
+    height:2rem;
+    padding:8px;
+
+}

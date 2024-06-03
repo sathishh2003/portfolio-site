@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sathishkumar</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/check.css">
+</head>
+<body>
+    <form action="/contact" method="get">
+    <header>
+<!-- Icon -->
+<span class="icons">
+<a href="https://www.linkedin.com/in/sathishkumar-m--2003-/" id="icon"><i class="fab fa-linkedin"></i></a>
+<a href="https://github.com/sathishh2003" id="icon"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.instagram.com/_sxthishx." id="icon"><i class="fa-brands fa-instagram"></i></a>
+</span>
+<span class="links">
+    <a href="/about">ABOUT</a>
+    <a href="/projects">PROJECTS</a>
+    <a href="/resume">RESUME</a>
+    <a href="/contact" class="contact">CONTACT</a>
+</span>
+</header>
+    <main>
+        <h2>Please enter the password due to security purpose certain members can see contact details!</h2>
+        <br><br>
+        <span class="outer">
+        <label for="input">Password:</label> 
+            <input type="password" name="value" minlength="4" class="text" required >
+            <input type="submit" value="submit"/ class="button">
+
+            </span>
+            <br><br>
+            <span class="sorry message">
+            {{#if code}}
+                <h4>sorry the passcode is wrong!</h4>
+            {{/if}}
+            </span>
+    </main>
+</form>
+</body>
+</html>
