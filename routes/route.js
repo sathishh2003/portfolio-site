@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 
-router.use('/about',(req,res)=>{
+router.get('/about',(req,res)=>{
     res.sendFile(path.join(__dirname,'..','views','about.html'));
 });
 router.get('/projects',(req,res)=>{
@@ -27,6 +27,9 @@ router.get('/contact',(req,res)=>{
         res.render('main',{code:code});
 
     }
+});
+router.get('/*',(req,res)=>{
+    res.status(404).sendFile(path.join(__dirname,'..','views','404.html'));
 });
 
 
