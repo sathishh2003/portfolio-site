@@ -32,9 +32,25 @@ section{
     text-align: center;
     background-color: white;
     transition: transform 4s;
+    animation-name: info;
+    animation-duration: 1s;
+}
+@keyframes info {
+        from{
+            transform: scale(0.1);
+        }
 }
 .outer:hover{
     transform: scale(1.1);
+}
+.contact{
+    animation-name:contact;
+    animation-duration: 1s;
+}
+@keyframes contact{
+    from{
+        transform: translateX(150px);
+    }
 }
 a{
     text-decoration: none;
@@ -96,4 +112,27 @@ header{
     height:2rem;
     padding:8px;
 
+}
+/*top header*/
+
+.link:hover{
+    color:black;
+}
+#icon:hover{
+    color: black;
+}
+.icons{
+    animation: icons;
+    animation-duration: 2s;
+}
+@keyframes icons{
+    from{
+        transform: translateX(-150px);
+    }
+    50%{
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(-2px);
+    } 
 }

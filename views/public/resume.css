@@ -67,6 +67,15 @@ img{
     margin-bottom: 2rem;
     border:2px solid black;
 }
+.fig{
+    animation-name:fig;
+    animation-duration: 2s;
+}
+@keyframes fig{
+    from {
+        transform: scale(0);
+    }
+}
 .backbtn:hover{
     background-color: var(--BGCOLOR2);
 }
@@ -84,4 +93,35 @@ main{
     flex-direction: column;
     text-align: center;
     justify-content: center;
-}   
+}  
+.resume{
+    animation-name: resume;
+    animation-duration: 1s;
+}
+@keyframes resume {
+        from{
+            transform: translateX(250px);
+        }
+}
+/* top header*/
+.link:hover{
+    color:black;
+}
+#icon:hover{
+    color: black;
+}
+.icons{
+    animation: icons;
+    animation-duration: 2s;
+}
+@keyframes icons{
+    from{
+        transform: translateX(-150px);
+    }
+    50%{
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(-2px);
+    } 
+}

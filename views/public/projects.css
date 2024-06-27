@@ -46,5 +46,34 @@ header{
     font-size: 0.8rem; 
     height:2rem;
     padding:8px;
-
+}
+.projects{
+    animation-name: projects;
+    animation-duration: 1s;
+}
+@keyframes projects{
+    from {
+        transform: translateX(350px);
+    }
+}
+.link:hover{
+    color:black;
+}
+#icon:hover{
+    color: black;
+}
+.icons{
+    animation: icons;
+    animation-duration: 2s;
+}
+@keyframes icons{
+    from{
+        transform: translateX(-150px);
+    }
+    50%{
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(-2px);
+    } 
 }

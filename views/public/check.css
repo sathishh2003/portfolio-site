@@ -90,4 +90,46 @@ main{
     color:var(--BGCOLOR2);
     border-color:var(--BGCOLOR3);
 }
+/* h2{
+    animation-name: h2;
+    animation-duration: 2s;
+}
+@keyframes h2{
+    from{
+        transform: translateY(-400px);
+    }  
+} */
+ 
+main{
+    animation-name: outer;
+    animation-duration: 2s;
+}
+@keyframes outer {
+        from{
+            color: transparent;
+            transform: scale(0);
+        }
+}
+/*top header*/
+.link:hover{
+    color:black;
+}
+#icon:hover{
+    color: black;
+}
+.icons{
+    animation: icons;
+    animation-duration: 2s;
+}
+@keyframes icons{
+    from{
+        transform: translateX(-150px);
+    }
+    50%{
+        transform: translateX(120px);
+    }
+    100%{
+        transform: translateX(-2px);
+    } 
+}
 
