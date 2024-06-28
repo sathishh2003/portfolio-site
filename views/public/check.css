@@ -99,7 +99,15 @@ main{
         transform: translateY(-400px);
     }  
 } */
- 
+.contact{
+    animation-name:contact;
+    animation-duration: 1s;
+}
+@keyframes contact{
+    from{
+        transform: translateX(150px);
+    }
+}
 main{
     animation-name: outer;
     animation-duration: 2s;
