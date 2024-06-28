@@ -99,7 +99,7 @@ main{
         transform: translateY(-400px);
     }  
 } */
-.contact{
+ .contact{
     animation-name:contact;
     animation-duration: 1s;
 }

@@ -54,15 +54,17 @@ body{
     font-weight: 400;
 }
 footer{
+    transition: 2s;
     background-color: var(--BGCOLOR3);
+
 }
-/* footer:hover{
+footer:hover{
     transition: 1s;
     background-color:rgba(0, 0, 0, 0.881);
     .skills{
-        color:whitesmoke;
+        color:var(--BGCOLOR2);
     }
-} */
+}
 .skillsOuter{
     display: flex;
     justify-content: center;
@@ -91,6 +93,7 @@ footer{
     transform: scale(1.2);
     background-color: var(--BGCOLOR2);
     color:var(--BGCOLOR1);
+    border:2px solid white;
     i{
         color:var(--BGCOLOR1);
     }

@@ -30,10 +30,13 @@ section{
     border:2px solid black; 
     padding:20px;
     text-align: center;
-    background-color: white;
     transition: transform 4s;
     animation-name: info;
     animation-duration: 1s;
+}
+.outer{
+    transition: 2s;
+    background-color: white;
 }
 @keyframes info {
         from{
@@ -41,7 +44,9 @@ section{
         }
 }
 .outer:hover{
+    transition: 1s;
     transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.637);
 }
 .contact{
     animation-name:contact;
