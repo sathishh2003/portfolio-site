@@ -6,14 +6,16 @@
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root{
-    --BGCOLOR1: rgb(53, 103, 185);
-    --BGCOLOR2: lightskyblue;
+    --BGCOLOR1: #FDD935;
+    --BGCOLOR2: #000000;
     --BGCOLOR3:whitesmoke;
 }
 header{
     padding-left: 2rem;
     padding-right: 2rem;
     display: flex;
+    position: sticky;
+    top: 0px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--BGCOLOR1);
@@ -25,10 +27,14 @@ body{
     display: flex;
     gap: 1rem;
     font-weight: 500;
+    position: relative;
 }
 .links .about{
-    color:var(--BGCOLOR2);
-    border-bottom: 3px solid white;
+    
+    color:white;
+    background-color: var(--BGCOLOR2);
+    border-radius: 3px 3px 0px 0px;
+    
 }
 #icon{
     color:white;
@@ -38,6 +44,7 @@ body{
 } */
 .skillType{
     font-weight: 600;
+    position: relative;
 }
 .main{
     margin-top:2rem;
@@ -62,7 +69,9 @@ footer:hover{
     transition: 1s;
     background-color:rgba(0, 0, 0, 0.881);
     .skills{
-        color:var(--BGCOLOR2);
+        color:var(--BGCOLOR1);
+        text-shadow: 2px 2px 10px var(--BGCOLOR2);
+
     }
 }
 .skillsOuter{
@@ -82,20 +91,58 @@ footer:hover{
     background-color: white;
     min-width: 10rem;
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     padding-bottom:2rem;
     padding-left:2rem;
     padding-right:2rem;
     transition: transform 0.5s;
     transform: scale(1);
 } 
+
+.skillType::after{
+    content: "";
+    background-color: var(--BGCOLOR2);
+    height: 2px;
+    left: 0px;
+    width:100%;
+    position: absolute; 
+    bottom:-3px;
+    box-shadow: 2px 2px 8px var(--BGCOLOR2);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition:transform 0.4s;  
+}
+
+.sathish{
+    background: url(./yellow-WhiteBackground.jpg);
+    width:14rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: transparent;
+    background-clip: text;
+}
+
 .skillColumn1:hover, .skillColumn2:hover, .skillColumn3:hover{
     transform: scale(1.2);
-    background-color: var(--BGCOLOR2);
+    background-color: var(--BGCOLOR1);
     color:var(--BGCOLOR1);
     border:2px solid white;
+    text-shadow: 2px 2px 8px black;
+    
+    
+    .skillType::after{
+        transform-origin: left;
+        transform: scale(1);
+    }
+    
+    .skillType{
+        color:var(--BGCOLOR2);
+        text-shadow: 2px 2px 8px var(--BGCOLOR2);
+    }
     i{
-        color:var(--BGCOLOR1);
+        color:var(--BGCOLOR2);
     }
     .frontendSkills, .backendSkills, .othersSkills{
         color: whitesmoke;
@@ -105,7 +152,8 @@ footer:hover{
     color:white;
     text-decoration: none;
     font-size: 0.8rem; 
-    height:1.2rem;
+    margin-top: 0.5rem;
+   /*  height:1.2rem; */
     padding:8px;
 
 }
@@ -119,6 +167,7 @@ footer:hover{
 main{
     background-color:var(--BGCOLOR2);
     display: flex;
+    color:white;
     justify-content: center;
     padding:2rem 10rem;
     column-gap: 2rem;
@@ -126,6 +175,7 @@ main{
 }
 .about{
     animation-name: about;
+    font-weight: bold;
     animation-duration: 1s;
 }
 @keyframes about{
@@ -161,7 +211,9 @@ footer{
         transform: translateY(350px);
     }
 }
+
 .icons{
+    position: relative;
     animation: icons;
     animation-duration: 2s;
 }

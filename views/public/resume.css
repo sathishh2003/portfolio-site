@@ -5,8 +5,8 @@
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root{
-    --BGCOLOR1: rgb(53, 103, 185);
-    --BGCOLOR2: lightskyblue;
+    --BGCOLOR1: #FDD935;
+    --BGCOLOR2: #000000;
     --BGCOLOR3:whitesmoke;
 }
 body{
@@ -18,6 +18,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top:0px;
     background-color: var(--BGCOLOR1);
 }
 .links{
@@ -26,9 +28,12 @@ header{
     font-weight: 500;
 }
 .links .resume{
-    color:var(--BGCOLOR2);
-    border-bottom: 3px solid white;
-} 
+    /* color:var(--BGCOLOR2); */
+    color:white;
+    background-color: var(--BGCOLOR2);
+    border-radius: 3px 3px 0 0;
+    /* border-bottom: 3px solid white; */
+}
 #icon{
     color:white;
 }
@@ -43,18 +48,10 @@ header{
     color:white;
     text-decoration: none;
     font-size: 0.8rem; 
-    height:1.2rem;
+    margin-top: 0.5rem;
+   /*  height:1.2rem; */
     padding:8px;
-
 }
-/* figcaption{
-    margin-left:14rem;
-    font-size: 2rem;
-    font-family: cursive;
-    color:var(--BGCOLOR1);
-  
-}
-*/
 img{
     margin-top: 2rem;
     
@@ -69,15 +66,32 @@ img{
 }
 .fig{
     animation-name:fig;
-    animation-duration: 2s;
+    animation-duration: 3s;
 }
 @keyframes fig{
     from {
-        transform: scale(0);
+        transform: translateX(600px);
     }
 }
 .backbtn:hover{
-    background-color: var(--BGCOLOR2);
+    background-color: white;
+    color:var(--BGCOLOR1);
+    border:2px solid var(--BGCOLOR1);
+}
+.island img{
+    position: absolute;
+    z-index:-1;
+    top:0px;
+    height:568px;
+    width: 1115px;    
+    left:0px;
+    animation-name: island;
+    animation-duration: 3s;
+}
+@keyframes island {
+    from{
+        transform: translateY(-600px);
+    }
 }
 .backbtn:active{
     background-color: var(--BGCOLOR1);

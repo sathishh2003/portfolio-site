@@ -4,7 +4,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const {engine} = require('express-handlebars');
 const router = require('./routes/route');
-const { log } = require('console');
 const PORT = 3450;
 
 app.use(express.static(path.join('views')));

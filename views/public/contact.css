@@ -7,8 +7,8 @@
 
 }
 :root{
-    --BGCOLOR1: rgb(53, 103, 185);
-    --BGCOLOR2: lightskyblue;
+    --BGCOLOR1: #FDD935;
+    --BGCOLOR2: #000000;
     --BGCOLOR3:whitesmoke;
 }
 section{
@@ -33,9 +33,10 @@ section{
     transition: transform 4s;
     animation-name: info;
     animation-duration: 1s;
+
 }
 .outer{
-    transition: 2s;
+    transition: 0.7s;
     background-color: white;
 }
 @keyframes info {
@@ -44,10 +45,34 @@ section{
         }
 }
 .outer:hover{
-    transition: 1s;
+    text-shadow: 2px 2px 8px black;
+   transition: 0.7s;
     transform: scale(1.1);
-  background-color: rgba(0, 0, 0, 0.637);
+  background-color: rgba(170, 170, 170, 0.600);
+
+  .gitlink::after,.linkedinlink::after{
+    transform: scale(1);
 }
+}
+.gitlink,.linkedinlink{
+    position: relative;
+    padding:0px 3px;
+}
+.gitlink::after,.linkedinlink::after{
+    content:"";
+    height:2px;
+    width:100%;
+    left: 0px;
+    background-color: var(--BGCOLOR1);
+    position: absolute;
+    bottom:-3px;
+    border-radius: 20px;
+    transform-origin: left;
+    transform: scale(0);
+    transition: 0.7s;
+    box-shadow: 2px 2px 5px black;
+}
+
 .contact{
     animation-name:contact;
     animation-duration: 1s;
@@ -76,7 +101,9 @@ a:active{
     border:2px solid black;
 }
 .backbtn:hover{
-    background-color: var(--BGCOLOR2);
+    background-color: white;
+    color:var(--BGCOLOR1);
+    border:2px solid var(--BGCOLOR1);
 }
 .backbtn:active{
     background-color: var(--BGCOLOR1);
@@ -96,10 +123,13 @@ header{
     gap: 1rem;
     font-weight: 500;
 }
- .links .contact{
-    color:var(--BGCOLOR2);
-    border-bottom: 3px solid white;
-} 
+.links .contact{
+    /* color:var(--BGCOLOR2); */
+    color:white;
+    background-color: var(--BGCOLOR2);
+    border-radius: 3px 3px 0 0;
+    /* border-bottom: 3px solid white; */
+}
 #icon{
     color:white;
 }
@@ -114,7 +144,8 @@ header{
     color:white;
     text-decoration: none;
     font-size: 0.8rem; 
-    height:2rem;
+    margin-top: 0.5rem;
+   /*  height:1.2rem; */
     padding:8px;
 
 }

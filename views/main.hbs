@@ -6,6 +6,11 @@
     <title>sathishkumar</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/check.css">
+{{!-- font --}}
+
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
     <form action="/contact" method="get">
@@ -17,27 +22,30 @@
 <a href="https://www.instagram.com/_sxthishx." id="icon"><i class="fa-brands fa-instagram"></i></a>
 </span>
 <span class="links">
-    <a href="/about" class="link">ABOUT</a>
+    <a href="/about" class="link">ABOUT ME</a>
     <a href="/projects" class="link">PROJECTS</a>
     <a href="/resume" class="link">RESUME</a>
     <a href="/contact" class="contact">CONTACT</a>
 </span>
 </header>
     <main>
-        <h2>Please enter the password due to security purpose certain members can see contact details!</h2>
+        <h2 class="anton-sc-regular">Please enter the password due to security purpose <br>certain members can see contact details!</h2>
         <br><br>
         <span class="outer">
-        <label for="input">Password:</label> 
-            <input type="password" name="value" minlength="4" class="text" required >
-            <input type="submit" value="submit"/ class="button">
-
+        <div class="inner">
+        <label for="value" class="lblpass">Password</label> 
+            <input type="password" name="value" minlength="4" class="text" required ><br>
+            <input type="submit" value="submit" class="button">
+            </div>
             </span>
             <br><br><br><br>
             <span class="sorry message">
             {{#if code}}
-                <h4>sorry the passcode is wrong!</h4>
+                <h4 class="anton-sc-regular">sorry It's wrong!</h4>
             {{/if}}
+            
             </span>
+            <span class="car"> <img src="./public/oldYellowcar.jpg" id="Car"></span>
     </main>
 </form>
 </body>
